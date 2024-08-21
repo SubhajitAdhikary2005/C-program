@@ -23,7 +23,7 @@ int BinarySearch(int a[],int low,int high, int X)
 }
 int main()
 {
- int a[100],n,i,X,mid,low,ans;
+ int a[100],n,i,X,mid,low=0,ans;
  printf("enter number of elements: ");
  scanf("%d",&n);
  printf("Enter a sorted array: ");
@@ -33,7 +33,7 @@ int main()
  }
  printf("Enter the element to be searched: ");
  scanf("%d",&X);
- ans=BinarySearch(a,low,n,X);
+ ans=BinarySearch(a,low,n-1,X);
  printf("The element %d is found at index no. %d",X,ans);
  return 0;
 }
