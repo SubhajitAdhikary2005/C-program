@@ -1,9 +1,7 @@
 #include<stdio.h>
 int BinarySearch(int a[],int low,int high, int X)
 {
-    int i,n;
-     low=0;
-     high=n-1;
+    int i;
     if(low>high)
     {
          return-1;
@@ -19,13 +17,13 @@ int BinarySearch(int a[],int low,int high, int X)
     }
     else
     {
-       return BinarySearch(a,low,mid+1,X);
+       return BinarySearch(a,mid+1,high,X);
     }
 
 }
 int main()
 {
- int a[100],n,i,X,mid,low,high;
+ int a[100],n,i,X,mid,low,ans;
  printf("enter number of elements: ");
  scanf("%d",&n);
  printf("Enter a sorted array: ");
@@ -35,7 +33,7 @@ int main()
  }
  printf("Enter the element to be searched: ");
  scanf("%d",&X);
- BinarySearch(a,low,high,X);
- printf("The element %d is found at index no. %d",X,high);
+ ans=BinarySearch(a,low,n,X);
+ printf("The element %d is found at index no. %d",X,ans);
  return 0;
 }
