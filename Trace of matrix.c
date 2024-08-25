@@ -1,18 +1,12 @@
 #include<stdio.h>
 int SparseMatrix(int r,int c, int mat[100][100])
 {
-   int i,j,k,trace=0;
+   int i,k,trace=0;
    if(r==c)
    {
       for(i=0;i<r;i++)
       {
-          for(j=0;j<c;j++)
-          {
-             if(i==j)
-             { 
-                 trace=trace+mat[i][j];
-             }
-          }
+             trace=trace+mat[i][i];//i==j so we can replace j by i
       }    
    printf("Trace of matrix is: %d",trace);
    }
