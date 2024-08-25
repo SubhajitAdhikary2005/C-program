@@ -1,5 +1,5 @@
 #include<stdio.h>
-int SparseMatrix(int r,int c, int mat[100][100])
+void SparseMatrix(int r,int c, int mat[100][100])
 {
    int i,j,k,count=0;
    for(i=0;i<r;i++)
