@@ -119,7 +119,7 @@ int main()
             break;
       case 4:
             printf("Enter the before element:");
-            scanf("%d",before);
+            scanf("%d",&before);
             printf("Enter the item: ");
             scanf("%d",&item);
             Insert_Before(before,item);
