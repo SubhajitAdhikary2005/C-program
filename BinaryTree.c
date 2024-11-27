@@ -47,7 +47,7 @@ struct node *delete(struct node *root,int val)
    {
      delete(root->left,val);
    }
-   else if(val>root->data);
+   else if(val>root->data)
    {
      delete(root->right,val);
    }
